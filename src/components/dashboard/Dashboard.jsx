@@ -15,9 +15,13 @@ const Dashboard = () => {
 
   let handleSubmit = (e) => {
     e.preventDefault();
-    let searchData = content_creators.filter((ele) =>
-      ele?.name.toLowerCase().includes(search.toLowerCase())
-    );
+    let searchData = content_creators.filter((ele) => {
+      return (
+        ele?.name.toLowerCase().includes(search.toLowerCase()) ||
+        ele?.specialization.toLowerCase().includes(search.toLowerCase())
+        // || ele?.education.toLowerCase().includes(search.toLowerCase())
+      );
+    });
     // console.log(searchData);
     setData(searchData);
     setSearch("");
@@ -25,7 +29,7 @@ const Dashboard = () => {
 
   return (
     <div>
-      <h1 className="font-bold">Dashboard</h1>
+      {/* <h1 className="font-bold">Dashboard</h1> */}
 
       {/** For search  */}
       <div>

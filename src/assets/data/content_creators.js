@@ -22,7 +22,7 @@ export let content_creators = [
       "I'm a Python developer and I'm working on creating a new project in Python. Please visit my portfolio for more information",
     language: "english",
     education: "b.tech",
-    specialization: "computer science",
+    specialization: "SEO",
     social_media_link: "http://github.com/abc",
     banner:
       "https://media.istockphoto.com/id/1474758428/vector/software-development-programming-engineering-coding-testing-and-bug-fixing-creating-new.jpg?s=1024x1024&w=is&k=20&c=_kDnN81Jl55EvsIoeEh_Q1cLrGC6vvB5_QFv7BBY_xY=",
@@ -37,7 +37,7 @@ export let content_creators = [
       "I'm a Python developer and I'm working on creating a new project in Python. Please visit my portfolio for more information",
     language: "english",
     education: "b.tech",
-    specialization: "computer science",
+    specialization: "content writing",
     social_media_link: "http://github.com/abc",
     banner:
       "https://media.istockphoto.com/id/1474758428/vector/software-development-programming-engineering-coding-testing-and-bug-fixing-creating-new.jpg?s=1024x1024&w=is&k=20&c=_kDnN81Jl55EvsIoeEh_Q1cLrGC6vvB5_QFv7BBY_xY=",
@@ -51,7 +51,7 @@ export let content_creators = [
     description:
       "I'm a Python developer and I'm working on creating a new project in Python. Please visit my portfolio for more information",
     language: "english",
-    education: "b.tech",
+    education: "b.com",
     specialization: "computer science",
     social_media_link: "http://github.com/abc",
     banner:
@@ -66,7 +66,7 @@ export let content_creators = [
     description:
       "I'm a Python developer and I'm working on creating a new project in Python. Please visit my portfolio for more information",
     language: "english",
-    education: "b.tech",
+    education: "BA",
     specialization: "computer science",
     social_media_link: "http://github.com/abc",
     banner:
