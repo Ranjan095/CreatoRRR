@@ -1,5 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 const Single_cart = ({
+  id,
   name,
   email,
   description,
@@ -37,12 +39,14 @@ const Single_cart = ({
             {email}
           </span>
         </div>
-        <button
-          type="button"
-          className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-        >
-         View Profile
-        </button>
+        <Link to={`/${id}`}>
+          <button
+            type="button"
+            className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+          >
+            View Profile
+          </button>
+        </Link>
       </div>
     </div>
   );

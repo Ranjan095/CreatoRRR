@@ -8,7 +8,7 @@ export let content_creators = [
     language: "english",
     education: "b.tech",
     specialization: "computer science",
-    social_media_link: "http://github.com/abc",
+    social_media_link: "https://github.com/Ranjan095",
     banner:
       "https://media.istockphoto.com/id/1474758428/vector/software-development-programming-engineering-coding-testing-and-bug-fixing-creating-new.jpg?s=1024x1024&w=is&k=20&c=_kDnN81Jl55EvsIoeEh_Q1cLrGC6vvB5_QFv7BBY_xY=",
     image:

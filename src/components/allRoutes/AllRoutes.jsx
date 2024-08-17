@@ -8,7 +8,7 @@ const AllRoutes = () => {
     <div>
       <Routes>
         <Route path={"/"} element={<Dashboard />} />
-        <Route path="/singleProfile" element={<SingleProfile />} />
+        <Route path="/:id" element={<SingleProfile />} />
       </Routes>
     </div>
   );

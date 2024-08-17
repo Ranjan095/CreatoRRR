@@ -62,7 +62,7 @@ const Dashboard = () => {
           </div>
         </form>
       </div>
-      <div className=" grid md:grid-cols-2 lg:grid-cols-3 border justify-items-center">
+      <div className=" grid sm:grid-cols-2 md:grid-cols-3 border justify-items-center">
         {data.length < 1 ? (
           <h1 className="text-3xl font-bold">No Data found..</h1>
         ) : (
