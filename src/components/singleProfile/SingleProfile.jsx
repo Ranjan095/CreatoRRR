@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { content_creators } from "../../assets/data/content_creators";
 import {
   Star,
@@ -22,7 +22,7 @@ const SingleProfile = () => {
       ele?.id == id && setProfile(ele);
     });
   }, []);
-  console.log(profile);
+  // console.log(profile);
   return (
     <section className="overflow-hidden">
       <div className="mx-auto max-w-5xl px-5 py-24">
@@ -130,12 +130,15 @@ const SingleProfile = () => {
             </div>
             <div className="m-3 p-2">
               {/* <Edit /> */}
-              <button
-                type="button"
-                className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-              >
-                Edit
-              </button>
+              <Link to={`/${profile.id}/edit`}>
+                {" "}
+                <button
+                  type="button"
+                  className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                >
+                  Edit
+                </button>
+              </Link>
             </div>
           </div>
         </div>
