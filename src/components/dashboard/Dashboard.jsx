@@ -9,10 +9,11 @@ const Dashboard = () => {
 
   // console.log(data);
 
-  let sessionData=JSON.parse(sessionStorage.getItem("data"))
+  let sessionData = JSON.parse(sessionStorage.getItem("data"));
 
   useEffect(() => {
-    !sessionData && sessionStorage.setItem("data", JSON.stringify(content_creators));
+    !sessionData &&
+      sessionStorage.setItem("data", JSON.stringify(content_creators));
     setData(JSON.parse(sessionStorage.getItem("data")));
   }, []);
 
