@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { content_creators } from "../../assets/data/content_creators";
-import { Star, ChevronDown, Instagram, Linkedin, Github } from "lucide-react";
+import {
+  Star,
+  ChevronDown,
+  Instagram,
+  Linkedin,
+  Github,
+  Edit,
+} from "lucide-react";
 
 const SingleProfile = () => {
   let [profile, setProfile] = useState({});
@@ -10,7 +17,8 @@ const SingleProfile = () => {
   // console.log(id);
 
   useEffect(() => {
-    content_creators?.map((ele) => {
+    let storage_data = JSON.parse(sessionStorage.getItem("data"));
+    storage_data?.map((ele) => {
       ele?.id == id && setProfile(ele);
     });
   }, []);
@@ -79,6 +87,11 @@ const SingleProfile = () => {
                 src={profile?.image}
                 alt="Dan_Abromov"
               />
+              <div className="flex items-center">
+                <span className="mr-3 text-sm font-semibold text-gray-600">
+                  {profile?.email}
+                </span>
+              </div>
               <div className="mt-4 flex flex-wrap">
                 <div className="w-auto p-1.5">
                   <a
@@ -114,6 +127,15 @@ const SingleProfile = () => {
                   </a>
                 </div>
               </div>
+            </div>
+            <div className="m-3 p-2">
+              {/* <Edit /> */}
+              <button
+                type="button"
+                className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              >
+                Edit
+              </button>
             </div>
           </div>
         </div>

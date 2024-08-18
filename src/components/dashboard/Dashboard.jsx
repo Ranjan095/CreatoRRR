@@ -10,16 +10,19 @@ const Dashboard = () => {
   // console.log(data);
 
   useEffect(() => {
-    setData(content_creators);
+    sessionStorage.setItem("data", JSON.stringify(content_creators));
+    setData(JSON.parse(sessionStorage.getItem("data")));
   }, []);
 
   let handleSubmit = (e) => {
     e.preventDefault();
-    let searchData = content_creators.filter((ele) => {
+    let storage_data = JSON.parse(sessionStorage.getItem("data"));
+    let searchData = storage_data.filter((ele) => {
       return (
         ele?.name.toLowerCase().includes(search.toLowerCase()) ||
-        ele?.specialization.toLowerCase().includes(search.toLowerCase())
-        // || ele?.education.toLowerCase().includes(search.toLowerCase())
+        ele?.specialization.toLowerCase().includes(search.toLowerCase()) ||
+        ele?.education.toLowerCase().includes(search.toLowerCase()) ||
+        ele?.language.toLowerCase().includes(search.toLowerCase())
       );
     });
     // console.log(searchData);
@@ -50,7 +53,7 @@ const Dashboard = () => {
               type="search"
               id="default-search"
               className="block w-full p-4 ps-10 text-sm outline-none border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Search..."
+              placeholder="Name / Language / Education / Specialization"
               required
             />
             <button
