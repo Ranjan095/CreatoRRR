@@ -1,6 +1,6 @@
-# Project Name
+# CreatoRRR
 
-A brief description of what your project does, its features, and its purpose.
+**CreatoRRR** is a dynamic marketplace designed to connect Content Creators (CC) with Product Companies (PC). The platform serves as a hub where Content Creators can showcase their skills and portfolios, and Product Companies can search for and hire them to create original content for product promotion.
 
 ## Table of Contents
 
